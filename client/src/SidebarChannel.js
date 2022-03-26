@@ -6,7 +6,7 @@ export default function SidebarChannel() {
     <div className="sidebarChannel">
         <h4>
             <span className="sidebarChannel__hash">#</span>
-            YouTube
+            Prakhar
         </h4>
     </div>
   )
