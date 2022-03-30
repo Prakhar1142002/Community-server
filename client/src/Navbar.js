@@ -4,12 +4,13 @@ import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import InterestsIcon from '@mui/icons-material/Interests';
-import { Avatar } from '@mui/material';
+import { Avatar} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
       <div className="navbar">
-
+      
         <div className="navbar__logo" >
           DISCORD
         </div>
@@ -23,12 +24,20 @@ export default function Navbar() {
         </div>
         <div className="nav__features">
           <div className="nav__features__logo">
-            <HomeIcon className='home__icon' fontSize='large'/>
-            <LibraryMusicIcon className='music__icon' fontSize='large'/>
-            <InterestsIcon className='interest__icon' fontSize='large'/>
+            <Link to='/home'>
+              <HomeIcon className='home__icon' fontSize='large' style={{color: 'white'}}/>
+            </Link>
+            <Link to='/music'>
+              <LibraryMusicIcon className='music__icon' fontSize='large' style={{color: 'white'}}/>
+            </Link>
+            <Link to='/interest'>
+              <InterestsIcon className='interest__icon' fontSize='large' style={{color: 'white'}}/>
+            </Link>
           </div>
           <div className="user__profile">
-          <Avatar src="https://cdn.statusqueen.com/dpimages/thumbnail/Krishna_Dp-2574.jpg"/>
+            <Link to='/profile'>
+              <Avatar src="https://cdn.statusqueen.com/dpimages/thumbnail/Krishna_Dp-2574.jpg"/>
+            </Link>
           </div>
         </div>
         

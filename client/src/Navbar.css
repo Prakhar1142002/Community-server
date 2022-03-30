@@ -19,7 +19,7 @@
     flex: 0.95;
 }
 
-::placeholder{
+.nav__search ::placeholder{
     color: black;
     text-align: center;
 }

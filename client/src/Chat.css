@@ -32,10 +32,14 @@
     width: 102%;
     font-size: large;
 }
-::placeholder{
-    color: rgba(255, 255, 255, 0.61);
+.chat__input ::placeholder{
+    color: rgba(255, 255, 255, 0.644);
+    text-align: center;
 }
-
+.chat__input ::selection{
+    background-color: white;
+    color: black;
+}
 .chat__input > form {
     flex: 1;
 }
