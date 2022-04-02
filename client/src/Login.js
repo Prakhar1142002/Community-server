@@ -46,9 +46,11 @@ export default function Login() {
     const onGoogleSuccess = (response)=>{
         console.log(response);
         // console.log(response.profileObj);
+        navigate('/home');
     }
     const onGoogleFailure = (response)=>{
         console.log(response);
+        alert('Unsuccessful Login, Maybe try again later!');
     }
   return (
     <div className="login">

@@ -10,6 +10,10 @@ import Login from './Login';
 import { auth } from './Firebase';
 import { useStateValue } from './StateProvider';
 import Dashboard from './Dashboard';
+import NewsAPI from './NewsAPI';
+import SportsAPI from './SportsAPI';
+import BusinessAPI from './BusinessAPI';
+import CryptoAPI from './CryptoAPI';
 
 function App() {
 
@@ -44,6 +48,10 @@ function App() {
       <Route path='/music' element={ <Music/> } />
       <Route path='/profile' element={ <Profile/> } />
       <Route path='/login' element={ <Login/> } />
+      <Route path='/news' element={ <NewsAPI/> } />
+      <Route path='/sports' element={ <SportsAPI/> } />
+      <Route path='/business' element={ <BusinessAPI/> } />
+      <Route path='/crypto' element={ <CryptoAPI/> } />
     </Routes>
 
     </BrowserRouter>
