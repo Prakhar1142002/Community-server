@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="navbar">
       
         <div className="navbar__logo" >
-          DISCORD
+          UniCord
         </div>
 
         {/* <div className="logo">

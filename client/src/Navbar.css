@@ -2,15 +2,20 @@
     height: 8vh;
     display: flex;
     align-items: center;
-    background-color: black;
+    background-color: rgb(46, 45, 45);
     color: white;
+    border-bottom: 1.5px solid black;
+    /* border-bottom: 1.5px solid rgb(90, 150, 240); */
+    z-index: 300;
 }
 
 .navbar__logo {
     margin: 5px;
-    letter-spacing: 5px;
-    color: #FF8000;
-    font-size: 2.3rem;
+    /* letter-spacing: 2px; */
+    /* color: #FF8000; */
+    color: gray;
+    font-size: 2.5rem;
+    font-weight: 650;
     cursor: pointer;
   }
 .nav__search{
