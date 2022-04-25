@@ -5,6 +5,7 @@ import { auth } from './Firebase'
 import Navbar from './Navbar'
 import './Profile.css'
 import { useStateValue } from './StateProvider'
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 
 export default function Profile() {
 
@@ -24,6 +25,10 @@ export default function Profile() {
         <Link to='/'>
           
           <button onClick={logoutAction} className='logout__button'>Logout</button>
+        </Link>
+
+        <Link to='/notification'>
+          <NotificationsActiveIcon fontSize='large' />
         </Link>
       </div>
     </>
