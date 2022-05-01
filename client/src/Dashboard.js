@@ -2,6 +2,7 @@ import React from 'react'
 import './Dashboard.css'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import { Link } from 'react-router-dom';
+import Login from './Login';
 
 export default function Dashboard() {
   return (

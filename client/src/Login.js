@@ -6,19 +6,19 @@ import GoogleLogin from 'react-google-login'
 
 import './Login.css'
 import { auth } from "./Firebase";
-
 const styleForLogo = {
     color: 'white',
-    height: '15vh',
-    width: '15vh'
+    height: '12vh',
+    width: '12vh'
 };
+
 
 
 export default function Login() {
     const navigate = useNavigate(); // Previously it was useHistory()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    // console.log(nickname)
     const signIn = e=>{
         e.preventDefault();
         auth
@@ -61,13 +61,14 @@ export default function Login() {
         </div>
 
         <div className="login__container">
-            <h1>Sign-in</h1>
+            <h2>Sign-in</h2>
             <form >
                 <div className="form__contents">
                     <h5>E-mail</h5>
                     <input type="text" value={email} onChange={e=>setEmail(e.target.value)} />
                     <h5>Password</h5>
                     <input type="password" value={password} onChange={e=>setPassword(e.target.value)} />
+                    
                     
                     <button type='submit' onClick={signIn}>Sign-In</button>
                 </div>
@@ -89,6 +90,10 @@ export default function Login() {
              
             />
         </div>
+        
     </div>
+    
   )
+  
 }
+

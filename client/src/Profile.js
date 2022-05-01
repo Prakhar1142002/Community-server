@@ -17,11 +17,10 @@ export default function Profile() {
   return (
     <>
       <Navbar/>
-      <h4>Hello, {user?.email} </h4>
+      <h4>Hello, {user? user?.email : <p>Guest</p>} </h4>
+      <h4>Your UniCord Username is '{user? user?.uid.substring(0,7) : <p>Guest</p>}' </h4>
       <div className="profile__dp">
-        <Avatar className='dp'
-        src='https://cdn.statusqueen.com/dpimages/thumbnail/Krishna_Dp-2574.jpg'
-        />
+        <Avatar className='dp' />
         <Link to='/'>
           
           <button onClick={logoutAction} className='logout__button'>Logout</button>

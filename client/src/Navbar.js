@@ -36,7 +36,7 @@ export default function Navbar() {
           </div>
           <div className="user__profile">
             <Link to='/profile'>
-              <Avatar src="https://cdn.statusqueen.com/dpimages/thumbnail/Krishna_Dp-2574.jpg"/>
+              <Avatar />
             </Link>
           </div>
         </div>

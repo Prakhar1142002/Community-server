@@ -14,7 +14,7 @@
     
     object-fit: contain;
 }
-.login__container > h1{
+.login__container > h2{
     color: rgb(238, 235, 235);
     text-align: center;
 }

@@ -10,8 +10,13 @@ import HeadsetIcon from '@mui/icons-material/Headset';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SidebarChannel from './SidebarChannel';
 import { Avatar } from '@mui/material';
+import { useStateValue } from './StateProvider';
 
 export default function Sidebar() {
+
+  const [{user}] = useStateValue();
+  // const username = user?.email
+  console.log(user)
   return (
     <div className="sidebar">
         <div className="sidebar__top">
@@ -25,7 +30,7 @@ export default function Sidebar() {
                     <ExpandMoreIcon/>
                     <h4>Text Channels</h4>
                 </div>
-                <AddIcon className='sidebar__addChannel'/>
+                <AddIcon fontSize='large' className='sidebar__addChannel'/>
             </div>
 
             <div className="sidebar__channelsList">
@@ -53,16 +58,20 @@ export default function Sidebar() {
         </div>
 
         <div className="sidebar__profile">
-          <Avatar src="https://cdn.statusqueen.com/dpimages/thumbnail/Krishna_Dp-2574.jpg"/>
+          <Avatar />
           <div className="sidebar__profileInfo">
-            <h3>Prakhar Rai</h3>
-            <p>#Pricks114</p>
+            {/* <h3>{username.slice(0, username.indexOf("@"))}</h3> */}
+            {/* <h3>hardcoded</h3> */}
+            <h3>{user? user?.email.substring(0, user?.email.indexOf("@")): <p>Guest</p> }</h3>
+            {/* <h3>Prakhar</h3> */}
+            <p>#{user? user?.uid.substring(0,7): <p>GuestUser</p>}</p>
+            {/* <p>#Pricks114</p> */}
           </div>
 
           <div className="sidebar__profileIcons">
-            <MicIcon/>
-            <HeadsetIcon/>
-            <SettingsIcon/>
+            <MicIcon />
+            <HeadsetIcon />
+            <SettingsIcon />
           </div>
         </div>
     </div>
