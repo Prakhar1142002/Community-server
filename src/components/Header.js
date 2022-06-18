@@ -3,6 +3,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router-dom";
 import { auth, provider } from "../firebase";
 
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+
 function Header() {
   const [user] = useAuthState(auth);
   const history = useHistory();
@@ -20,24 +22,28 @@ function Header() {
     <header className="bg-discord_blue flex items-center justify-between py-4 px-6">
       <a href="/">
         <img
-          src="https://rb.gy/it5msp"
-          className="w-32 h-12 object-contain"
-          alt=""
+          src="/discord_logo.gif"
+          className="w-20 h-15 object-contain"
+          alt="DISCORD"
         />
+        {/* <SportsEsportsIcon
+          fontSize="large"
+          style={{ color: "white", height: "50px", width: "50px" }}
+        /> */}
       </a>
       <div className="hidden lg:flex  space-x-6 ">
         <a className="link">Download</a>
-        <a className="link">Why Discord?</a>
-        <a className="link">Nitro</a>
-        <a className="link">Safety</a>
-        <a className="link">Support</a>
+        <a className="link">Why UniCord?</a>
+        <a className="link">Home</a>
+        <a className="link">About</a>
+        <a className="link">Contact Us</a>
       </div>
       <div className="flex space-x-4">
         <button
           className="bg-white p-2 rounded-full text-xs md:text-sm px-4 focus:outline-none hover:shadow-2xl hover:text-discord_blurple transition duration-200 ease-in-out whitespace-nowrap font-medium"
           onClick={!user ? signIn : () => history.push("/channels")}
         >
-          {!user ? "Login" : "Open Discord"}
+          {!user ? "Login" : "Open Unicord"}
         </button>
         <MenuIcon className="h-9 text-white cursor-pointer lg:hidden" />
       </div>
